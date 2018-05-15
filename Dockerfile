@@ -3,7 +3,7 @@ FROM circleci/openjdk:8-jdk
 USER root
 
 # AWS CLI needs the PUTHONIOENCODING environment variable to handle UTF-8 correctly:
-ENV PYTHONIOENCODING-UTF-8
+ENV PYTHONIOENCODING=UTF-8
 
 RUN apt-get update && \
     apt-get upgrade -y && \
